@@ -1,0 +1,138 @@
+.custom-container {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(86, 239, 255, 0.1),
+      rgba(240, 103, 255, 0.15),
+      rgba(0, 255, 8, 0.1),
+      rgba(26, 159, 255, 0.3)
+    ),
+    url(../img/pexels-zachary-debottis-1888883-min.jpg) no-repeat fixed;
+  background-position: bottom;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  .hidden-title {
+    visibility: hidden;
+  }
+
+  .title-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -90%) scale(1.2);
+    @include respond(xl-screen) {
+      transform: scale(3) translate(-10%, -50%);
+    }
+    @include respond(tab-port) {
+      transform: scale(1) translate(-50%, -50%);
+    }
+    @include respond(phone) {
+      transform: scale(0.8) translate(-62%, -50%);
+    }
+    @include respond(sm-screen) {
+      transform: scale(0.6) translate(-82.5%, -50%);
+    }
+
+    path {
+      &:nth-child(2) {
+        stroke-dasharray: 270px;
+        stroke-dashoffset: 270px;
+        animation: logo-animation 2s ease forwards;
+      }
+      &:nth-child(3) {
+        stroke-dasharray: 103.4px;
+        stroke-dashoffset: 103.4px;
+        animation: logo-animation 2s ease forwards 0.3s;
+      }
+      &:nth-child(4) {
+        stroke-dasharray: 201px;
+        stroke-dashoffset: 201px;
+        animation: logo-animation 2s ease forwards 0.6s;
+      }
+      &:nth-child(5) {
+        stroke-dasharray: 101px;
+        stroke-dashoffset: 101px;
+        animation: logo-animation 2s ease forwards 0.9s;
+      }
+      &:nth-child(6) {
+        stroke-dasharray: 176px;
+        stroke-dashoffset: 176px;
+        animation: logo-animation 2s ease forwards 1.2s;
+      }
+      &:nth-child(7) {
+        stroke-dasharray: 182.3px;
+        stroke-dashoffset: 182.3px;
+        animation: logo-animation 2s ease forwards 1.5s;
+      }
+      &:nth-child(8) {
+        stroke-dasharray: 130px;
+        stroke-dashoffset: 130px;
+        animation: logo-animation 2s ease forwards 1.8s;
+      }
+      &:nth-child(9) {
+        stroke-dasharray: 194.5px;
+        stroke-dashoffset: 194.5px;
+        animation: logo-animation 2s ease forwards 2.1s;
+      }
+      &:nth-child(10) {
+        stroke-dasharray: 103.43px;
+        stroke-dashoffset: 103.43px;
+        animation: logo-animation 2s ease forwards 2.4s;
+      }
+      &:nth-child(11) {
+        stroke-dasharray: 146.19px;
+        stroke-dashoffset: 146.19px;
+        animation: logo-animation 2s ease forwards 2.7s;
+      }
+      &:nth-child(12) {
+        stroke-dasharray: 200.7px;
+        stroke-dashoffset: 200.7px;
+        animation: logo-animation 2s ease forwards 3s;
+      }
+      &:nth-child(13) {
+        stroke-dasharray: 222.89px;
+        stroke-dashoffset: 222.89px;
+        animation: logo-animation 2s ease forwards 3.3s;
+      }
+      &:nth-child(14) {
+        stroke-dasharray: 182.22px;
+        stroke-dashoffset: 182.22px;
+        animation: logo-animation 2s ease forwards 3.6s;
+      }
+    }
+  }
+}
+
+@keyframes logo-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-animation {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fill-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#logo-fill {
+  position: absolute;
+  animation: fill-animation 8s ease forwards;
+}
+#logo-reverse {
+  animation: fill-reverse 1s ease forwards 6s;
+}

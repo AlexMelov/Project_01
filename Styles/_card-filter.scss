@@ -1,0 +1,75 @@
+.cards {
+  &__checkbox-1,
+  &__checkbox-2,
+  &__checkbox-3 {
+    display: none;
+  }
+  background-color: $primary-color;
+  padding-bottom: 5rem;
+  &__background-1,
+  &__background-2,
+  &__background-3 {
+    font-size: 2rem;
+    padding: 0.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+    background-color: $tertial-color;
+    color: white;
+    padding: 3rem 2rem;
+    border-right: 0.1rem solid white;
+    transition: all 0.3s ease;
+    span {
+      filter: invert(0.18);
+    }
+    &:last-child {
+      @include respond(tab-port) {
+        grid-column: span 2;
+        justify-content: center;
+      }
+      @include respond(phone) {
+        grid-column: span 1;
+        justify-content: start;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-0.5rem);
+      border-radius: 0.5rem;
+    }
+    &:active {
+      transform: translateY(0rem);
+      cursor: grabbing;
+    }
+ 
+    span {
+      display: block;
+      color: $tertial-color;
+    }
+  }
+  &__filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    list-style-type: none;
+    @include respond(tab-port) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__checkbox-1:checked ~ &__background-1 {
+    background-color: $secondary-darken;
+    border-right: none;
+  }
+  &__checkbox-2:checked ~ &__background-2 {
+    background-color: $secondary-darken;
+    border-right: none;
+  }
+  &__checkbox-3:checked ~ &__background-3 {
+    background-color: $secondary-darken;
+    border-right: none;
+  }
+}
