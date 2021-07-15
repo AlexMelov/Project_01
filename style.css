@@ -534,7 +534,7 @@
 
 .custom-container {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), color-stop(rgba(86, 239, 255, 0.1)), color-stop(rgba(240, 103, 255, 0.15)), color-stop(rgba(0, 255, 8, 0.1)), to(rgba(26, 159, 255, 0.3))), url(../img/pexels-zachary-debottis-1888883-min.jpg) no-repeat fixed;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(86, 239, 255, 0.1), rgba(240, 103, 255, 0.15), rgba(0, 255, 8, 0.1), rgba(26, 159, 255, 0.3)), url(../img/pexels-zachary-debottis-1888883-min.jpg) no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(86, 239, 255, 0.1), rgba(240, 103, 255, 0.15), rgba(0, 255, 8, 0.1), rgba(26, 159, 255, 0.3)), url(./img/pexels-zachary-debottis-1888883-min.jpg) no-repeat fixed;
   background-position: bottom;
   background-size: cover;
   height: 50vh;
